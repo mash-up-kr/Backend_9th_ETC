@@ -1,6 +1,10 @@
 buildscript {
     ext {
+<<<<<<< HEAD
         springBootVersion = '2.1.7.RELEASE'
+=======
+        springBootVersion = '2.3.0.RELEASE'
+>>>>>>> 98e7338... [#6] Chore : 프로젝트 기본 셋팅 추가
     }
     repositories {
         mavenCentral()
