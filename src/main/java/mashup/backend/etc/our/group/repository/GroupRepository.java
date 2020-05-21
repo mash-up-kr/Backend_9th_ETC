@@ -2,6 +2,7 @@ package mashup.backend.etc.our.group.repository;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import mashup.backend.etc.our.group.dto.ResGroupDto;
 import mashup.backend.etc.our.group.entity.Group;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -23,4 +24,15 @@ public interface GroupRepository {
 =======
 public interface GroupRepository {
 >>>>>>> 01d2806... [#6] Chore : 패키지 구조 설계 (#13)
+=======
+import mashup.backend.etc.our.group.entity.Group;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
+
+public interface GroupRepository extends JpaRepository<Group, Long> {
+    @Query("SELECT g.groupId, g.name FROM Group g ORDER BY g.groupId DESC")
+    List<Group> readGroupList();
+>>>>>>> df4cf72... [#9] Feat : Group 리스트 조회 기능 추가
 }
