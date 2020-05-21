@@ -1,5 +1,6 @@
 package mashup.backend.etc.our.group.repository;
 
+<<<<<<< HEAD
 import mashup.backend.etc.our.group.entity.Group;
 import org.junit.After;
 import org.junit.Test;
@@ -22,4 +23,7 @@ public class GroupRepositoryTest {
     public void cleanup() {
         groupRepository.deleteAll();
     }
+=======
+public class GroupRepositoryTest {
+>>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
 }

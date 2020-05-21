@@ -1,5 +1,6 @@
 package mashup.backend.etc.our.group.entity;
 
+<<<<<<< HEAD
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,4 +28,7 @@ public class Group extends BaseTimeEntity {
         this.name = name;
         this.code = code;
     }
+=======
+public class Group {
+>>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
 }

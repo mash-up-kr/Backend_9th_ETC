@@ -1,5 +1,6 @@
 package mashup.backend.etc.our.group.repository;
 
+<<<<<<< HEAD
 import mashup.backend.etc.our.group.dto.ResGroupDto;
 import mashup.backend.etc.our.group.entity.Group;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,4 +16,7 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
             "FROM Group g INNER JOIN UserGroup ug " +
             "ON ug.groupId=g.groupId WHERE ug.userId=:userId")
     List<ResGroupDto> findGroupsByUserId(@Param("userId") Long userId);
+=======
+public interface GroupRepository {
+>>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
 }
