@@ -1,6 +1,7 @@
 package mashup.backend.etc.our.group.repository;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import mashup.backend.etc.our.group.dto.ResGroupDto;
 import mashup.backend.etc.our.group.entity.Group;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -19,4 +20,7 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
 =======
 public interface GroupRepository {
 >>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
+=======
+public interface GroupRepository {
+>>>>>>> 01d2806... [#6] Chore : 패키지 구조 설계 (#13)
 }

@@ -1,6 +1,7 @@
 package mashup.backend.etc.our.group.controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import mashup.backend.etc.our.group.dto.ReqGroupListDto;
 import mashup.backend.etc.our.group.dto.ResGroupListDto;
 import mashup.backend.etc.our.group.entity.Group;
@@ -37,4 +38,7 @@ public class GroupControllerTest {
 =======
 public class GroupControllerTest {
 >>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
+=======
+public class GroupControllerTest {
+>>>>>>> 01d2806... [#6] Chore : 패키지 구조 설계 (#13)
 }

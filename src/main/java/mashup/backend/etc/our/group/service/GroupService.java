@@ -1,6 +1,7 @@
 package mashup.backend.etc.our.group.service;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import lombok.RequiredArgsConstructor;
 import mashup.backend.etc.our.group.dto.ResGroupDto;
 import mashup.backend.etc.our.group.dto.ResGroupListDto;
@@ -40,4 +41,7 @@ public class GroupService {
 =======
 public class GroupService {
 >>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
+=======
+public class GroupService {
+>>>>>>> 01d2806... [#6] Chore : 패키지 구조 설계 (#13)
 }

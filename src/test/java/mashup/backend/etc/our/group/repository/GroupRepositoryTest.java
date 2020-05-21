@@ -1,6 +1,7 @@
 package mashup.backend.etc.our.group.repository;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import mashup.backend.etc.our.group.entity.Group;
 import org.junit.After;
 import org.junit.Test;
@@ -26,4 +27,7 @@ public class GroupRepositoryTest {
 =======
 public class GroupRepositoryTest {
 >>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
+=======
+public class GroupRepositoryTest {
+>>>>>>> 01d2806... [#6] Chore : 패키지 구조 설계 (#13)
 }
