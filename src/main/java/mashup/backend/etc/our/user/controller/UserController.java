@@ -1,4 +1,4 @@
-package mashup.backend.etc.our.user;
+package mashup.backend.etc.our.user.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
