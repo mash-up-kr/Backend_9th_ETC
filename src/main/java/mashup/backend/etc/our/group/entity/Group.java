@@ -3,8 +3,11 @@ package mashup.backend.etc.our.group.entity;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> df4cf72... [#9] Feat : Group 리스트 조회 기능 추가
+=======
+>>>>>>> a8f6066... Group 리스트 조회 API (#14)
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,12 +20,16 @@ import javax.persistence.*;
 @Entity
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @Table(name = "GROUP_TABLE")
 =======
 >>>>>>> df4cf72... [#9] Feat : Group 리스트 조회 기능 추가
 =======
 @Table(name = "GROUP_TABLE")
 >>>>>>> 4ca5ea6... [#9] Feat : Group 리스트 조회 기능 추가
+=======
+@Table(name = "GROUP_TABLE")
+>>>>>>> a8f6066... Group 리스트 조회 API (#14)
 public class Group extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +42,7 @@ public class Group extends BaseTimeEntity {
     private String code;
 
     @Builder
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public Group(String name, String code) {
@@ -56,4 +64,10 @@ public class Group {
         this.code = code;
     }
 >>>>>>> df4cf72... [#9] Feat : Group 리스트 조회 기능 추가
+=======
+    public Group(String name, String code) {
+        this.name = name;
+        this.code = code;
+    }
+>>>>>>> a8f6066... Group 리스트 조회 API (#14)
 }

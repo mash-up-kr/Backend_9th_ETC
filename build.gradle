@@ -2,6 +2,7 @@ buildscript {
     ext {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         springBootVersion = '2.1.7.RELEASE'
 =======
         springBootVersion = '2.3.0.RELEASE'
@@ -9,6 +10,9 @@ buildscript {
 =======
         springBootVersion = '2.1.7.RELEASE'
 >>>>>>> 4ca5ea6... [#9] Feat : Group 리스트 조회 기능 추가
+=======
+        springBootVersion = '2.1.7.RELEASE'
+>>>>>>> a8f6066... Group 리스트 조회 API (#14)
     }
     repositories {
         mavenCentral()
