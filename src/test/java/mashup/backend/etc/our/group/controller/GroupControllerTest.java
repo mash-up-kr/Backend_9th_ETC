@@ -2,6 +2,9 @@ package mashup.backend.etc.our.group.controller;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4ca5ea6... [#9] Feat : Group 리스트 조회 기능 추가
 import mashup.backend.etc.our.group.dto.ReqGroupListDto;
 import mashup.backend.etc.our.group.dto.ResGroupListDto;
 import mashup.backend.etc.our.group.entity.Group;
@@ -21,6 +24,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+<<<<<<< HEAD
 public class GroupControllerTest {
     @LocalServerPort
     private int port;
@@ -41,4 +45,20 @@ public class GroupControllerTest {
 =======
 public class GroupControllerTest {
 >>>>>>> 01d2806... [#6] Chore : 패키지 구조 설계 (#13)
+=======
+public class GroupControllerTest {
+    @LocalServerPort
+    private int port;
+
+    @Autowired
+    private TestRestTemplate restTemplate;
+
+    @Autowired
+    private GroupRepository groupRepository;
+
+    @After
+    public void cleanup() throws Exception {
+        groupRepository.deleteAll();
+    }
+>>>>>>> 4ca5ea6... [#9] Feat : Group 리스트 조회 기능 추가
 }

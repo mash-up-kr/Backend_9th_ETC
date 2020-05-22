@@ -4,7 +4,11 @@ package mashup.backend.etc.our.group.service;
 <<<<<<< HEAD
 <<<<<<< HEAD
 import lombok.RequiredArgsConstructor;
+<<<<<<< HEAD
 import mashup.backend.etc.our.group.dto.ResGroupDto;
+=======
+import mashup.backend.etc.our.group.dto.ReqGroupListDto;
+>>>>>>> 4ca5ea6... [#9] Feat : Group 리스트 조회 기능 추가
 import mashup.backend.etc.our.group.dto.ResGroupListDto;
 import mashup.backend.etc.our.group.repository.GroupRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,8 +63,8 @@ public class GroupService {
     private GroupRepository groupRepository;
 
     @Transactional(readOnly = true)
-    public List<ResGroupListDto> readGroupList() {
-        return groupRepository.readGroupList().stream()
+    public List<ResGroupListDto> readGroupList(ReqGroupListDto reqGroupListDto) {
+        return groupRepository.readGroupList(reqGroupListDto.getUserId()).stream()
                 .map(ResGroupListDto::new)
                 .collect(Collectors.toList());
     }
