@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
+@Table(name = "GROUP_TABLE")
 public class Group extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +23,8 @@ public class Group extends BaseTimeEntity {
     private String code;
 
     @Builder
-    public Group(String name) {
+    public Group(String name, String code) {
         this.name = name;
+        this.code = code;
     }
 }
