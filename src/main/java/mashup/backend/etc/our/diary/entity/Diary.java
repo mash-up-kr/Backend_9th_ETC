@@ -1,5 +1,6 @@
 package mashup.backend.etc.our.diary.entity;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -23,5 +24,13 @@ public class Diary {
     private String title;
 
     private String contents;
+
+    @Builder
+    public Diary (long diaryId, long groupId, String title, String contents){
+        this.diaryId = diaryId;
+        this.groupId = groupId;
+        this.title = title;
+        this.contents = contents;
+    }
 
 }
