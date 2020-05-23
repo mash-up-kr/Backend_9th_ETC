@@ -1,5 +1,6 @@
 package mashup.backend.etc.our.group.controller;
 
+import mashup.backend.etc.our.group.entity.Group;
 import mashup.backend.etc.our.group.repository.GroupRepository;
 import org.junit.After;
 import org.junit.runner.RunWith;

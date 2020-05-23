@@ -7,7 +7,7 @@ import mashup.backend.etc.our.group.dto.ResMakeGroupDto;
 import mashup.backend.etc.our.group.service.GroupService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
