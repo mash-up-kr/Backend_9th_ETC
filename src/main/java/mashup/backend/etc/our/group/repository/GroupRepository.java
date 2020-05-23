@@ -21,6 +21,7 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
             "FROM Group g INNER JOIN UserGroup ug " +
             "ON ug.groupId=g.groupId WHERE ug.userId=:userId")
     List<ResGroupDto> findGroupsByUserId(@Param("userId") Long userId);
+<<<<<<< HEAD
 =======
 public interface GroupRepository {
 >>>>>>> 02a07f3... [#6] Chore : 패키지 구조 설계
@@ -67,4 +68,9 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
             "ON ug.groupId=g.groupId WHERE ug.userId=:userId")
     List<ResGroupDto> findGroupsByUserId(@Param("userId") Long userId);
 >>>>>>> 7095dd2... [#9] Fix : Group 리스트 조회 API 수정
+=======
+
+    @Query("SELECT g.groupId FROM Group g WHERE g.code=:code")
+    Long findGroupIdByCode(@Param("code") String code);
+>>>>>>> 139e4af... [#10] Group 생성 API 추가
 }

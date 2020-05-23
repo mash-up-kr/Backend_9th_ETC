@@ -4,6 +4,7 @@ package mashup.backend.etc.our.group.controller;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4ca5ea6... [#9] Feat : Group 리스트 조회 기능 추가
 =======
@@ -11,16 +12,15 @@ package mashup.backend.etc.our.group.controller;
 import mashup.backend.etc.our.group.dto.ReqGroupListDto;
 import mashup.backend.etc.our.group.dto.ResGroupListDto;
 import mashup.backend.etc.our.group.entity.Group;
+=======
+>>>>>>> 139e4af... [#10] Group 생성 API 추가
 import mashup.backend.etc.our.group.repository.GroupRepository;
 import org.junit.After;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
