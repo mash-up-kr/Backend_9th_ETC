@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import mashup.backend.etc.our.common.domain.BaseTimeEntity;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @NoArgsConstructor
