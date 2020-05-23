@@ -1,12 +1,11 @@
 package mashup.backend.etc.our.group.controller;
 
-import jdk.nashorn.internal.runtime.regexp.joni.exception.ErrorMessages;
 import lombok.RequiredArgsConstructor;
 import mashup.backend.etc.our.group.dto.ResGroupListDto;
 import mashup.backend.etc.our.group.service.GroupService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.*;;
 
 @RequiredArgsConstructor
 @RestController
