@@ -1,5 +1,6 @@
 package mashup.backend.etc.our.diary.controller;
 
+import mashup.backend.etc.our.diary.dto.ReqDeleteDiaryDto;
 import mashup.backend.etc.our.diary.dto.ReqPostDiaryDto;
 import mashup.backend.etc.our.diary.dto.ResDiaryDto;
 import mashup.backend.etc.our.diary.service.DiaryService;
@@ -18,16 +19,16 @@ public class DiaryController {
 
     @PostMapping
     public ResponseEntity post(@RequestBody ReqPostDiaryDto reqBody){
-        return ResponseEntity.status(HttpStatus.OK).body(diaryService.create());
+        return ResponseEntity.status(HttpStatus.OK).body(diaryService.create(reqBody));
     }
 
     @PutMapping
-    public ResponseEntity update(){
-        return ResponseEntity.status(HttpStatus.OK).body(diaryService.update());
+    public ResponseEntity update(@PathVariable long diaryId, @RequestBody ReqPostDiaryDto reqBody){
+        return ResponseEntity.status(HttpStatus.OK).body(diaryService.update(diaryId, reqBody));
     }
 
-    @DeleteMapping
-    public ResponseEntity delete(){
-        return ResponseEntity.status(HttpStatus.OK).body(diaryService.delete());
+    @DeleteMapping("/{diaryId}")
+    public ResponseEntity delete(@PathVariable long diaryId, @RequestBody ReqDeleteDiaryDto requestBody){
+        return ResponseEntity.status(HttpStatus.OK).body(diaryService.delete(diaryId, requestBody));
     }
 }
