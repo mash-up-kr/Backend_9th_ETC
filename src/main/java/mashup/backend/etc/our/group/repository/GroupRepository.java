@@ -15,4 +15,7 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
             "FROM Group g INNER JOIN UserGroup ug " +
             "ON ug.groupId=g.groupId WHERE ug.userId=:userId")
     List<ResGroupDto> findGroupsByUserId(@Param("userId") Long userId);
+
+    @Query("SELECT g.groupId FROM Group g WHERE g.code=:code")
+    Long findGroupIdByCode(@Param("code") String code);
 }

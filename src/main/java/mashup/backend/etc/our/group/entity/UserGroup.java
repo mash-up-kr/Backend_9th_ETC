@@ -22,7 +22,7 @@ public class UserGroup {
     private Long groupId;
 
     @Builder
-    public UserGroup(String name, String code) {
+    public UserGroup(Long userId, Long groupId) {
         this.userId = userId;
         this.groupId = groupId;
     }
