@@ -1,15 +1,16 @@
 package mashup.backend.etc.our.group.dto;
 
+import lombok.Builder;
 import lombok.Getter;
-import mashup.backend.etc.our.group.entity.Group;
+
+import java.util.List;
 
 @Getter
 public class ResGroupListDto {
-    private Long groupId;
-    private String groupName;
+    private List<ResGroupDto> groupList;
 
-    public ResGroupListDto(Group entity) {
-        this.groupId = entity.getGroupId();
-        this.groupName = entity.getName();
+    @Builder
+    public ResGroupListDto(List<ResGroupDto> groupList) {
+        this.groupList = groupList;
     }
 }
