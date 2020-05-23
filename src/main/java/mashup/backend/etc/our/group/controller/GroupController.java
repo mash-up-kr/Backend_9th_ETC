@@ -1,6 +1,5 @@
 package mashup.backend.etc.our.group.controller;
 
-import jdk.nashorn.internal.runtime.regexp.joni.exception.ErrorMessages;
 import lombok.RequiredArgsConstructor;
 import mashup.backend.etc.our.group.dto.ReqMakeGroupDto;
 import mashup.backend.etc.our.group.dto.ResGroupListDto;

@@ -5,6 +5,7 @@ package mashup.backend.etc.our.group.controller;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4ca5ea6... [#9] Feat : Group 리스트 조회 기능 추가
 =======
@@ -14,6 +15,8 @@ import mashup.backend.etc.our.group.dto.ResGroupListDto;
 import mashup.backend.etc.our.group.entity.Group;
 =======
 >>>>>>> 139e4af... [#10] Group 생성 API 추가
+=======
+>>>>>>> e3d23f6597d1e76653947e6a256fd58a7c16e4a5
 import mashup.backend.etc.our.group.repository.GroupRepository;
 import org.junit.After;
 import org.junit.runner.RunWith;
