@@ -1,13 +1,12 @@
 package mashup.backend.etc.our.diary.service;
 
 import lombok.RequiredArgsConstructor;
-import mashup.backend.etc.our.diary.dto.ReqDiaryListDto;
-import mashup.backend.etc.our.diary.dto.ResDiaryDto;
-import mashup.backend.etc.our.diary.dto.ResDiaryListDto;
+import mashup.backend.etc.our.diary.dto.*;
 import mashup.backend.etc.our.diary.entity.Diary;
 import mashup.backend.etc.our.diary.repository.DiaryRepository;
 import mashup.backend.etc.our.group.entity.Group;
 import mashup.backend.etc.our.group.repository.GroupRepository;
+import mashup.backend.etc.our.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,6 +18,7 @@ import java.util.stream.Collectors;
 public class DiaryListService {
     private final DiaryRepository diaryRepository;
     private final GroupRepository groupRepository;
+    private final UserRepository userRepository;
 
     @Transactional(readOnly=true)
     public ResDiaryListDto readDiaryList(ReqDiaryListDto reqDiaryListDto){
@@ -37,5 +37,19 @@ public class DiaryListService {
                 .groupCode(foundGroup.getCode())
                 .diaries(diaryList)
                 .build();
+    }
+
+    public ResSingleDiaryDto getSingleDiaryById(Long diaryId, ReqSingleDiaryDto reqSingleDiaryDto){
+        Diary diary = diaryRepository.findById(diaryId)
+                .orElseThrow(()->new IllegalArgumentException("해당 글이 없습니다"));
+
+
+        //TODO user domain
+        /*
+        User writer = userRepository.findById(reqSingleDiaryDto.getUserId())
+                .orElseThrow(()->new IllegalArgumentException("해당 글이 없습니다"));
+         */
+
+        return new ResSingleDiaryDto(diary,"test"); //TODO "test"-> writer.name
     }
 }

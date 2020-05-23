@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DiaryRepository extends JpaRepository<Diary, Integer> {
+public interface DiaryRepository extends JpaRepository<Diary, Long> {
 
     @Query("SELECT new mashup.backend.etc.our.diary.dto.ResDiaryDto(d.diaryId, d.title, d.writerId, d.createTime,d.createTime) " +
             "FROM Diary d INNER JOIN UserGroup ug " +
