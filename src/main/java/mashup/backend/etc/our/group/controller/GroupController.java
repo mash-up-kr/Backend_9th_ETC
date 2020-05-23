@@ -1,13 +1,12 @@
 package mashup.backend.etc.our.group.controller;
 
+import jdk.nashorn.internal.runtime.regexp.joni.exception.ErrorMessages;
 import lombok.RequiredArgsConstructor;
-import mashup.backend.etc.our.group.dto.ReqGroupListDto;
 import mashup.backend.etc.our.group.dto.ResGroupListDto;
 import mashup.backend.etc.our.group.service.GroupService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -16,8 +15,9 @@ public class GroupController {
     private final GroupService groupService;
 
     @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public List<ResGroupListDto> readGroupList(@RequestBody ReqGroupListDto reqGroupListDto) {
-        return groupService.readGroupList(reqGroupListDto);
+    public ResponseEntity<ResGroupListDto> readGroupList(@RequestParam Long userId) {
+        if(userId==null) /* 인증 관련 코드 추가 해야함 */
+            return new ResponseEntity("접근 권한 없음", HttpStatus.UNAUTHORIZED);
+        return ResponseEntity.status(HttpStatus.OK).body(groupService.readGroupList(userId));
     }
 }
