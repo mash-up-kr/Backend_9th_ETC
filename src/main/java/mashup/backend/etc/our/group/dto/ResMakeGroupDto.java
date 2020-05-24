@@ -6,11 +6,13 @@ import lombok.Getter;
 import java.util.List;
 
 @Getter
-public class ResGroupListDto {
+public class ResMakeGroupDto {
+    private String message;
     private List<ResGroupDto> groupList;
 
     @Builder
-    public ResGroupListDto(List<ResGroupDto> groupList) {
+    public ResMakeGroupDto(String message, List<ResGroupDto> groupList) {
+        this.message = message;
         this.groupList = groupList;
     }
 }
