@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/diary")
 public class DiaryController {
-    private DiaryService diaryService;
+    private final DiaryService diaryService;
 
     public DiaryController(DiaryService diaryService){
         this.diaryService = diaryService;
@@ -23,12 +23,12 @@ public class DiaryController {
     }
 
     @PutMapping
-    public ResponseEntity update(@PathVariable long diaryId, @RequestBody ReqPostDiaryDto reqBody){
+    public ResponseEntity update(@PathVariable Long diaryId, @RequestBody ReqPostDiaryDto reqBody){
         return ResponseEntity.status(HttpStatus.OK).body(diaryService.update(diaryId, reqBody));
     }
 
     @DeleteMapping("/{diaryId}")
-    public ResponseEntity delete(@PathVariable long diaryId, @RequestBody ReqDeleteDiaryDto requestBody){
+    public ResponseEntity delete(@PathVariable Long diaryId, @RequestBody ReqDeleteDiaryDto requestBody){
         return ResponseEntity.status(HttpStatus.OK).body(diaryService.delete(diaryId, requestBody));
     }
 }

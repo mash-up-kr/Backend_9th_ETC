@@ -9,7 +9,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ResDiaryDto {
-    private long diaryId;
+    private Long diaryId;
     private String writerName;
     private String title;
     private String contents;
