@@ -63,9 +63,8 @@ public class DiaryService {
     @Transactional
     public ResDiaryDto create(ReqPostDiaryDto requestDto){
         String writerName = getWriterName(requestDto.getUserId());
-        Long diaryId = diaryRepository.save(requestDto.toEntity()).getDiaryId();
-        Diary diary = diaryRepository.findByDiaryId(diaryId)
-                .orElseThrow(()-> new IllegalArgumentException("저장되지 않았습니다."));
+        Diary diary = diaryRepository.save(requestDto.toEntity());
+
         return new ResDiaryDto(diary, writerName);
     }
 
@@ -74,11 +73,9 @@ public class DiaryService {
         Diary diary = diaryRepository.findByDiaryId(diaryId)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다."));
         String writerName = getWriterName(requestDto.getUserId());
-        Long id = diaryRepository.save(requestDto.toEntity()).getDiaryId();
-        Diary updatedDiary = diaryRepository.findByDiaryId(diaryId)
-                .orElseThrow(()-> new IllegalArgumentException("저장되지 않았습니다."));
+        Diary updatedDiary = diaryRepository.save(requestDto.toEntity());
 
-        return new ResDiaryDto(diary, writerName);
+        return new ResDiaryDto(updatedDiary, writerName);
     }
 
     @Transactional

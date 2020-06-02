@@ -6,6 +6,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class ReqDeleteDiaryDto {
-    private long userId;
-    private long groupId;
+    private Long userId;
+    private Long groupId;
 }

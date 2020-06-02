@@ -16,11 +16,11 @@ import javax.persistence.Id;
 public class Diary extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long diaryId;
+    private Long diaryId;
 
-    private long writerId;
+    private Long writerId;
 
-    private long groupId;
+    private Long groupId;
 
     private String title;
 

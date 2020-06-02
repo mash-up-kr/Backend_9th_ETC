@@ -8,8 +8,8 @@ import mashup.backend.etc.our.diary.domain.entity.Diary;
 @Getter
 @NoArgsConstructor
 public class ReqPostDiaryDto {
-    private long userId;
-    private long groupId;
+    private Long userId;
+    private Long groupId;
     private String title;
     private String contents;
 
