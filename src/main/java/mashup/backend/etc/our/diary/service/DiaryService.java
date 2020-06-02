@@ -87,9 +87,16 @@ public class DiaryService {
         Diary diary = diaryRepository.findByDiaryId(diaryId)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다."));
         diaryRepository.delete(diary);
-//        다이어리 리스트 가져오는 메소드 필요
-        //TODO Diary와 DiaryList의 controller 및 service 합치기
-        return new ResDiaryListDto("groupCode", new ArrayList<ResReadDiaryDto>());
+
+        ReqDiaryListDto reqDiaryListDto = ReqDiaryListDto.builder()
+                .groupId(diary.getGroupId())
+                .userId(diary.getWriterId())
+                .build();
+
+        // 다이어리 리스트 가져오기
+        ResDiaryListDto resDiaryListDto = readDiaryList(reqDiaryListDto);
+
+        return resDiaryListDto;
     }
 
     private String getWriterName(Long userId){
