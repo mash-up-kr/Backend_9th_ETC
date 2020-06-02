@@ -3,7 +3,7 @@ package mashup.backend.etc.our.diary.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import mashup.backend.etc.our.diary.entity.Diary;
+import mashup.backend.etc.our.diary.domain.entity.Diary;
 
 @Getter
 @NoArgsConstructor

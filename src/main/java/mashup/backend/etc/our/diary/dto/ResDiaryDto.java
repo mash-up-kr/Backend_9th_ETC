@@ -1,9 +1,9 @@
 package mashup.backend.etc.our.diary.dto;
 
+import mashup.backend.etc.our.diary.domain.entity.Diary;
+
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import mashup.backend.etc.our.diary.entity.Diary;
-
 import java.util.Date;
 
 @NoArgsConstructor
