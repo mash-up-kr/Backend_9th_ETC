@@ -9,10 +9,10 @@ import java.util.List;
 @Getter
 public class ResDiaryListDto {
     private String groupCode;
-    private List<ResDiaryDto> diaries;
+    private List<ResReadDiaryDto> diaries;
 
     @Builder
-    private ResDiaryListDto(String groupCode, List<ResDiaryDto> diaries){
+    public ResDiaryListDto(String groupCode, List<ResReadDiaryDto> diaries){
         this.diaries=diaries;
         this.groupCode=groupCode;
     }

@@ -1,21 +1,25 @@
 package mashup.backend.etc.our.diary.dto;
 
-import lombok.Getter;
 import mashup.backend.etc.our.diary.entity.Diary;
 
-import java.time.LocalDateTime;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import java.util.Date;
 
-@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ResDiaryDto {
-    private Long diaryId;
+    private long diaryId;
+    private String writerName;
     private String title;
-    private Long writerId;
-    private LocalDateTime createTime;
+    private String contents;
+    private Date createTime;
+    private Date updateTime;
 
-    public ResDiaryDto(Diary entity) {
-        this.diaryId = entity.getDiaryId();
-        this.title = entity.getTitle();
-        this.writerId = entity.getWriterId();
-        this.createTime = entity.getCreateTime();
+    public ResDiaryDto(Diary diary, String writerName){
+        this.diaryId = diary.getDiaryId();
+        this.writerName = writerName;
+        this.title = diary.getTitle();
+        this.contents = diary.getContents();
     }
 }

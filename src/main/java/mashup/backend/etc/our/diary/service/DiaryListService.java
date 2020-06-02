@@ -30,8 +30,8 @@ public class DiaryListService {
 
         Long groupId = userGroup.getGroupId();
 
-        List<ResDiaryDto> diaryList = diaryRepository.findDiariesByGroupId(groupId).stream()
-                .map(ResDiaryDto::new)
+        List<ResReadDiaryDto> diaryList = diaryRepository.findDiariesByGroupId(groupId).stream()
+                .map(ResReadDiaryDto::new)
                 .collect(Collectors.toList());
 
         Group foundGroup = groupRepository.findById(groupId)
