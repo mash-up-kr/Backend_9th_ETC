@@ -1,6 +1,6 @@
-package mashup.backend.etc.our.diary.repository;
+package mashup.backend.etc.our.diary.domain.repository;
 
-import mashup.backend.etc.our.diary.entity.Diary;
+import mashup.backend.etc.our.diary.domain.entity.Diary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

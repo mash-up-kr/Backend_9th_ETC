@@ -1,7 +1,7 @@
 package mashup.backend.etc.our.diary.dto;
 
 import lombok.Getter;
-import mashup.backend.etc.our.diary.entity.Diary;
+import mashup.backend.etc.our.diary.domain.entity.Diary;
 
 import java.time.LocalDateTime;
 

@@ -2,8 +2,8 @@ package mashup.backend.etc.our.diary.service;
 
 import lombok.RequiredArgsConstructor;
 import mashup.backend.etc.our.diary.dto.*;
-import mashup.backend.etc.our.diary.entity.Diary;
-import mashup.backend.etc.our.diary.repository.DiaryRepository;
+import mashup.backend.etc.our.diary.domain.entity.Diary;
+import mashup.backend.etc.our.diary.domain.repository.DiaryRepository;
 import mashup.backend.etc.our.group.entity.Group;
 import mashup.backend.etc.our.group.entity.UserGroup;
 import mashup.backend.etc.our.group.repository.GroupRepository;
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.NoResultException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

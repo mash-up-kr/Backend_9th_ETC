@@ -1,4 +1,4 @@
-package mashup.backend.etc.our.diary.entity;
+package mashup.backend.etc.our.diary.domain.entity;
 
 import lombok.Builder;
 import lombok.Getter;
