@@ -14,7 +14,7 @@ public class ReqPostDiaryDto {
     private String contents;
 
     @Builder
-    public ReqPostDiaryDto(long groupId, String title, String contents){
+    public ReqPostDiaryDto(Long groupId, String title, String contents){
         this.groupId = groupId;
         this.title = title;
         this.contents = contents;
@@ -23,6 +23,7 @@ public class ReqPostDiaryDto {
     public Diary toEntity(){
         return Diary.builder()
                 .groupId(groupId)
+                .writerId(userId)
                 .title(title)
                 .contents(contents)
                 .build();

@@ -34,7 +34,7 @@ public class DiaryService {
 
         Long groupId = userGroup.getGroupId();
 
-        List<ResReadDiaryDto> diaryList = diaryRepository.findDiariesByGroupId(groupId).stream()
+        List<ResReadDiaryDto> diaryList = diaryRepository.findAllByGroupId(groupId).stream()
                 .map(ResReadDiaryDto::new)
                 .collect(Collectors.toList());
 
@@ -61,38 +61,28 @@ public class DiaryService {
     }
 
     @Transactional
-    public ResDiaryDto create(ReqPostDiaryDto requestDto){
-        String writerName = getWriterName(requestDto.getUserId());
-        Diary diary = diaryRepository.save(requestDto.toEntity());
+    public ResMessage create(ReqPostDiaryDto requestDto){
+        diaryRepository.save(requestDto.toEntity());
 
-        return new ResDiaryDto(diary, writerName);
+        return new ResMessage("다이어리 작성이 완료되었습니다.");
     }
 
     @Transactional
-    public ResDiaryDto update(Long diaryId, ReqPostDiaryDto requestDto){
+    public ResMessage update(Long diaryId, ReqPostDiaryDto requestDto){
         Diary diary = diaryRepository.findByDiaryId(diaryId)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다."));
-        String writerName = getWriterName(requestDto.getUserId());
-        Diary updatedDiary = diaryRepository.save(requestDto.toEntity());
+        diary.update(diary.getTitle(), diary.getContents());
 
-        return new ResDiaryDto(updatedDiary, writerName);
+        return new ResMessage("다이어리 수정이 완료되었습니다.");
     }
 
     @Transactional
-    public ResDiaryListDto delete(Long diaryId, ReqDeleteDiaryDto requestDto){
+    public ResMessage delete(Long diaryId, ReqDeleteDiaryDto requestDto){
         Diary diary = diaryRepository.findByDiaryId(diaryId)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다."));
         diaryRepository.delete(diary);
 
-        ReqDiaryListDto reqDiaryListDto = ReqDiaryListDto.builder()
-                .groupId(diary.getGroupId())
-                .userId(diary.getWriterId())
-                .build();
-
-        // 다이어리 리스트 가져오기
-        ResDiaryListDto resDiaryListDto = readDiaryList(reqDiaryListDto);
-
-        return resDiaryListDto;
+        return new ResMessage("다이어리가 삭제되었습니다.");
     }
 
     private String getWriterName(Long userId){

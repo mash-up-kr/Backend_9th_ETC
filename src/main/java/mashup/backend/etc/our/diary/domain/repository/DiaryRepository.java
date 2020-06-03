@@ -14,6 +14,6 @@ public interface DiaryRepository extends JpaRepository<Diary, Long> {
 
     Optional<Diary> findByDiaryId(Long diaryId);
 
-    @Query("SELECT d FROM Diary d WHERE groupId=:groupId")
-    List<Diary> findDiariesByGroupId(@Param("groupId") Long groupId);
+    List<Diary> findAllByGroupId(@Param("groupId") Long groupId);
+
 }
