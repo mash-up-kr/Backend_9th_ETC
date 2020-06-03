@@ -12,6 +12,5 @@ import java.util.Optional;
 public interface UserGroupRepository  extends JpaRepository<UserGroup, Long> {
     List<UserGroup> findAllByUserId(Long userId);
 
-    @Query("SELECT ug FROM UserGroup ug WHERE ug.groupId=:groupId AND ug.userId=:userId")
     Optional<UserGroup> findUserGroupByGroupIdAndUserId(Long groupId, Long userId);
 }

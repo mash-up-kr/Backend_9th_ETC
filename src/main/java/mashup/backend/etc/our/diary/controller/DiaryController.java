@@ -28,7 +28,7 @@ public class DiaryController {
         return ResponseEntity.status(HttpStatus.OK).body(diaryService.create(reqBody));
     }
 
-    @PutMapping
+    @PutMapping("/{diaryId}")
     public ResponseEntity update(@PathVariable Long diaryId, @RequestBody ReqPostDiaryDto reqBody){
         return ResponseEntity.status(HttpStatus.OK).body(diaryService.update(diaryId, reqBody));
     }
